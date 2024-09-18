@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" name="robots" content="noindex" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            color: rgb(220, 220, 220);
+            background-color: black;
+            text-align: left;
+            width: 17.5%;
+            margin-left: 150px;
+        }
+        button{font-size: 100px;
+               width: 2em;
+               height: 1.5em;
+               background-color: rgb(205, 205, 205);
+               color: rgb(245, 245, 245);
+               margin-left: 150px;
+               margin-right: 0px;
+               transition-property: all;
+               transition-duration: 1s;
+               transition-delay: 0s;
+               margin-top: 20px;
+               margin-bottom: 20px;
+               border: 5px;
+               border-radius: 5%;
+               align-items: baseline;
+               align-content: left;
+        }
+        button:hover{color: rgb(220, 220, 220);
+                     background-color: rgb(0, 0, 0);
+
+        }
+        section{text-align: left;}
+        .midasi {
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(220, 220, 220);
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 150px;
+            /*animation:midasi 1s 1.5s ease both;*/
+        }
+        @keyframes midasi{
+            0%{
+                font-size: 30px;
+            }
+            100%{
+                font-size: 60px;
+            }
+        }
+        .midasi::before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            animation: midasiBg .5s 1s ease both;
+        }
+        @keyframes midasiBg{
+            0%{
+                right: 100%;
+            }
+            100%{
+                right: 0%;
+            }
+        }
+        /*.inituite{
+            animation: inituiteBg 1s 1.5s ease both;
+            font-size: 24px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+        }
+        @keyframes inituiteBg{
+            0%{
+                font-size: 24px;
+            }
+            100%{
+                font-size: 44px;
+            }
+        }
+        .inituite:hover{
+            color: black;
+            background-color: white;
+        }*/
+        .inituite{
+            display: inline-block;
+            transition: all .3s ease 0s;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 150px;
+            margin-top: 60px;
+            background-color: rgba(153, 195, 110, 0.553);
+            width: 20%;
+        }
+        .inituite:hover{
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+        .shokunituite{
+            display: inline-block;
+            transition: all .3s ease 0s;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 150px;
+            background-color: rgba(255, 155, 208, 0.563);
+            width: 20%;
+        }
+        .shokunituite:hover{
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+        .juunituite{
+            display: inline-block;
+            transition: all .3s ease 0s;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 150px;
+            margin-top: 20px;
+            background-color: #94ffff8a;
+            width: 20%;
+        }
+        .juunituite:hover{
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+
+        body{
+            background-color: rgb(220, 220, 220);
+        }
+        p{
+            margin-left: 150px;
+        }
+        .typing-animation{
+            width:29ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        }
+        @keyframes blink {
+            50%{
+                border-color: transparent;
+            }
+        }
+        .rageblue{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+        }
+        .rageblue{
+            width:39ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .rage{
+            margin-top: 0px;
+            margin-left: 700px;
+            margin-top: -183px;
+        }
+        .warabi {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:39ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .warabii{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:50ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .warabiii{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:51ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .warabimoti{
+            margin-left: 150px;
+            margin-top: 0px;
+            margin-left: 800px;
+            margin-top: -170px;
+        }
+        .kanagawa{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:40ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .kanagawaa{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:47ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .kanagawaaa{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 167px;
+            width:65ch;
+            /*border-right: 5px solid #000;*/
+            overflow: hidden;
+            white-space: nowrap;
+            color: #000;
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 700;
+            animation: typing 3s steps(18), blink .4s step-end infinite alternate;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 167px;
+        }
+        @keyframes typing{
+            from{
+                width: 0;
+            }
+        
+        }
+        @keyframes blink {
+           
+            50%{
+                border-color: transparent;
+            }
+        }
+        .shimonagaya{
+            margin-left: 150px;
+            margin-top: 200px;
+            margin-left: 900px;
+            margin-top: -190px;
+            
+        }
+        .horror{
+            display: inline-block;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(220, 220, 220);
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 150px;
+            margin-top: 60px;
+            margin-bottom: 24px;
+            margin-right: 1000px;
+            /*animation:midasi 1s 1.5s ease both;*/
+        }
+        @keyframes horror{
+            0%{
+                font-size: 30px;
+            }
+            100%{
+                font-size: 60px;
+            }
+        }
+        .horror::before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            animation: horrorBg .5s 3.4s ease both;
+        }
+        @keyframes horrorBg{
+            0%{
+                right: 100%;
+            }
+            100%{
+                right: 0%;
+            }
+        }
+        .clicktxt {
+        color: rgb(220, 220, 220);
+        background-color: #000000;
+        padding:15px;
+        border-radius: 0px;
+        margin-left: 150px;
+        
+        }
+
+        .switchdsp input {
+        display: none;
+        }
+
+        .switchdsp .dsp {
+        padding: 0px 0px 0px 0px;
+        height: 0;
+        overflow: hidden;
+        transition: 0.9s;
+        opacity: 0;
+        
+        }
+
+        .switchdsp input:checked ~ .dsp {
+        padding: 0px 50px 50px 100px;
+        height: auto;
+        opacity: 1;
+        }
+        .tensi{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        .clicktxt {
+        color: rgb(220, 220, 220);
+        background-color: #000000;
+        padding:15px;
+        border-radius: 0px;
+        }
+
+        .switchdsp input {
+        display: none;
+        }
+
+        .switchdsp .dsp {
+        padding: 0px 80px 80px 10px;
+        height: 0;
+        overflow: hidden;
+        transition: 0.9s;
+        opacity: 0;
+        }
+
+            .switchdsp input:checked ~ .dsp {
+            padding: 0px 50px 50px 100px;
+            height: auto;
+            opacity: 1;
+        }
+        .saturiku{
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .wazawai{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        .setumei{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        .kisi{
+            margin-left: 265px;
+        }
+        .setumei2{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        .abiko{
+            margin-left: 265px;
+        }
+        .setumei3{
+            font-size: 24px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold; 
+        }
+        .oda{
+            margin-left: 265px;
+        }
+        .shousetu{
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(220, 220, 220);
+            position: relative;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 150px;
+            margin-top: 0px;
+            margin-bottom: 60px;
+        
+            /*animation:midasi 1s 1.5s ease both;*/
+        }
+        @keyframes horror{
+            0%{
+                font-size: 24px;
+            }
+            100%{
+                font-size: 48px;
+            }
+        }
+        .shousetu::before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            animation: shousetuBg .5s 4.2s ease both;
+        }
+        @keyframes shousetuBg{
+            0%{
+                right: 100%;
+            }
+            100%{
+                right: 0%;
+            }
+        }
+        h2{
+            position: relative;
+            padding: 1rem 2rem calc(1rem+20px);
+            background: #80808072;
+            margin-left: 150px;
+            width: 15%;
+        }
+
+        h2:before{
+            position: absolute;
+            top: -7px;
+            left: -7px;
+            width: 100%;
+            height: 100%;
+            content:'';
+            border: 4px solid #000;
+        }
+        .matome{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 154px;
+            margin-left: 150px;
+        }
+        .matome1{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 154px;
+            margin-left: 150px;
+            background-color: #80808072;
+            width: 46%;
+        }
+        h3{
+            position: relative;
+            padding: 1.5rem 1rem;
+        }
+
+        h3:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 9%;
+            height: 10px;
+            content: '';
+            background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-size: 7px 7px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .poi{
+            margin-left: 150px;
+            font-size: 20px;
+        }
+        .reco1{
+            margin-left: 265px;
+            margin-top: -60px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        h4{
+            position: relative;
+            padding: 1.5rem 1rem;
+        }
+
+        h4:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 9%;
+            height: 10px;
+            content: '';
+            background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-size: 7px 7px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .poi2{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+        .reco2{
+            margin-left: 265px;
+            margin-top: -60px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+        h5{
+            position: relative;
+            padding: 1.5rem 1rem;
+        }
+
+        h5:after{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 9%;
+            height: 10px;
+            content: '';
+            background-image: -webkit-repeating-linear-gradient(135deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-image: repeating-linear-gradient(-45deg, #000, #000 1px, transparent 2px, transparent 5px);
+            background-size: 7px 7px;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .poi3{
+            font-size: 20px;
+            margin-left: 150px;
+        }
+        .reco3{
+            margin-left: 265px;
+            margin-top: -68px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+        }
+            
+    </style>
+    
+</head>
+
+<body>
+    <h1>新田悠介の自己紹介ページ</h1>
+    <div class="midasi">紹介する内容</div> 
+ <section> 
+    <button>衣</button>
+    <button>食</button>
+    <button>住</button>
+</section> 
+    <div class="inituite">1.衣について</div>
+    <p class="typing-animation">赤色の洋服は全部好きです。</p>
+    <p class="rageblue">rageblueと言うお店でよく服を買います。</p>
+    <div class="rage"><img src="images.png" alt=""></div>
+    <div class="shokunituite">2.食について</div>
+    <p class="warabi">わらび餅が大好きです。</p>
+    <p class="warabii">わらび餅を見かけたら必ず買うようにしています。</p>
+    <p class="warabiii">何かおすすめのわらび餅があったら教えてください!</p>
+    <div class="warabimoti"><img src="images.jpeg" alt=""></div>
+    <div class="juunituite">3.住について</div>
+    <p class="kanagawa">横浜市の下永谷という所に住んでいます。</p>
+    <p class="kanagawaa">自然豊かなのどかな環境で、大好きな場所です。</p>
+    <p class="kanagawaaa">将来は川が近くに流れている、防音室がある家に住みたいです。</p>
+    <div class="shimonagaya"><img src="Unknown.jpeg" alt=""></div>
+    <div class="horror">最近ハマっていること</div>
+    <div class="shousetu">ホラー小説を読むこと。(最近はミステリーにも興味がある)</div>
+    <div class="switchdsp">
+        <label for="l-1">
+        <span class="clicktxt">check</span>
+        </label>
+        <input type="checkbox" id="l-1"><div class="dsp">
+        <p class="tensi">1位.貴志祐介　『天使の囀り』　角川文庫</p>
+        <p class="setumei">全ての謎がラストに向けてまとまって行く爽快感が堪らない！物語としてもホラーとしても最高の作品でした。</p>
+        <p class="setumei">物語としてもホラーとしても最高の作品でした。</p>
+        <div class="kisi"><img src="61NZtyqPX+L._AC_UL640_QL65_.jpg" alt=""></div>
+        <h3 class="poi">point</h3>
+        <p class="reco1">ホラーもミステリーも好きな人におすすめ！</p>
+        </div></div>
+        <div class="switchdsp">
+            <label for="l-2">
+            <span class="clicktxt">check</span>
+            </label>
+            <input type="checkbox" id="l-2"><div class="dsp">
+            <p class="saturiku">2位.我孫子武丸　『殺戮に至る病』　講談社文庫</p>
+            <p class="setumei2">ただの猟奇殺人犯を描いたミステリー小説だと油断していたら痛い目を見ました。</p>
+            <p class="setumei2">最後の1ページで物語の全てが覆る！</p>
+            <div class="abiko"><img src="81dHL1lY42L._AC_UL640_QL65_.jpg" alt=""></div>
+            <h4 class="poi2">point</h4>
+            <p class="reco2">ミステリー小説の醍醐味”叙述トリック”を体感したい方におすすめ！</p>
+            </div></div> 
+            <div class="switchdsp">
+                <label for="l-3">
+                <span class="clicktxt">check</span>
+                </label>
+                <input type="checkbox" id="l-3"><div class="dsp">
+                <p class="wazawai">3位.小田雅久仁　『禍』　新潮社</p>
+                <p class="setumei3">人の体を題材にした7つの物語</p>
+                <p class="setumei3">自分の体にも起こりそうな生々しさに震えました。</p>
+                <p class="setumei3">中でも喪色記はホラー小説でありながらどこか儚げで、私のお気に入りです。</p>
+                <div class="oda"><img src="81pj-Xc5jnL._AC_UL640_QL65_.jpg" alt=""></div>
+                <h5 class="poi3">point</h5>
+                <p class="reco3">テンポ良く繰り返される恐怖を楽しみたい方におすすめ！</p>
+                </div></div>  
+                <h2> まとめ</h2>
+                <div class="matomee">
+                <p class="matome1">rageblueの赤い服が好き</p>
+                <p class="matome">わらび餅が好きで、目に入ったものは全部食べる</p>
+                <p class="matome1">横浜市の田舎に住んでいて、のんびりとした暮らしが好き</p>
+                <p class="matome">最近はホラー小説を家に籠って読んでおり、ホラーの中でも好きになる作品の傾向が出てきた。</p>
+                <p class="matome1">好きな作家さんは貴志祐介、梨、背筋さんで、気になっている作家さんは東野圭吾さん</p>
+               </div></div>
+                
+</body>
+</html>
